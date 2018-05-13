@@ -6,4 +6,5 @@
     <string name="nav_home">Home</string>
     <string name="nav_notif">Notification</string>
     <string name="nav_account">Account</string>
+    <string name="nav_map">Map</string>
 </resources>

@@ -23,7 +23,7 @@ public class Login extends AppCompatActivity {
         sharedpref = Login.this.getPreferences(Context.MODE_PRIVATE);
         if(sharedpref.contains("username")) {
             //langsung masuk ke intent
-            Intent intent = new Intent(Login.this,Home.class);
+            Intent intent = new Intent(Login.this,MainActivity.class);
             intent.putExtra("username", sharedpref.getString("username", "none"));
             startActivity(intent);
             finish();
@@ -39,7 +39,7 @@ public class Login extends AppCompatActivity {
                 String usernameKey = Username.getText().toString();
                 String passwordKey = Password.getText().toString();
                 if (usernameKey.equals("admin") && passwordKey.equals("admin")) {
-                    Intent intent = new Intent(Login.this,Home.class);
+                    Intent intent = new Intent(Login.this,MainActivity.class);
                     intent.putExtra("username", usernameKey);
                     editor = sharedpref.edit();
                     editor.putString("username", usernameKey);
